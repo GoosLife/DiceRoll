@@ -4,11 +4,6 @@
     {
         static void Main(string[] args)
         {
-            Console.BackgroundColor = ConsoleColor.Blue;
-            Console.ForegroundColor = ConsoleColor.White;
-
-            char userInput2;
-
             char userInput;
 
             static void RollDice()
@@ -21,22 +16,28 @@
                 switch (diceRoll)
                 {
                     case 1:
-                        Console.WriteLine("Du slog en etter");
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Du slog en etter.");
                         break;
                     case 2:
-                        Console.WriteLine("Du slog en to'er");
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("Du slog en to'er.");
                         break;
                     case 3:
-                        Console.WriteLine("Du slog en tre'er");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Du slog en tre'er.");
                         break;
                     case 4:
-                        Console.WriteLine("Du slog en firer");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Du slog en firer.");
                         break;
                     case 5:
-                        Console.WriteLine("Du slog en femmer");
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.WriteLine("Du slog en femmer.");
                         break;
                     case 6:
-                        Console.WriteLine("Du slog en sekser");
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine("Du slog en sekser.");
                         break;
                 }
             }
@@ -46,7 +47,7 @@
                 RollDice();
                 userInput = Console.ReadKey().KeyChar;
             }
-            while (userInput != 'X');
+            while (userInput != 'x');
         }
     }
 }
